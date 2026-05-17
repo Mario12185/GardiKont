@@ -1,0 +1,1 @@
+﻿export default function Reports() { return <div className='p-6 text-xl font-bold'>Reports (À implémenter)</div> }

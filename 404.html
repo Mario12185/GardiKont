@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirection GardiKont</title>
+  <script>
+    // 🔁 Redirige toutes les routes vers index.html pour React Router
+    (function() {
+      const path = window.location.pathname;
+      const basePath = '/GardiKont';
+      
+      // Si on n'est pas déjà sur index.html, rediriger
+      if (!path.endsWith('index.html') && !path.endsWith('/')) {
+        const redirectPath = basePath + '/index.html';
+        // Sauvegarder la route d'origine pour React Router
+        sessionStorage.setItem('redirectPath', path.replace(basePath, ''));
+        window.location.replace(redirectPath);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p style="text-align:center;padding:20px;font-family:sans-serif;">Redirection vers GardiKont...</p>
+</body>
+</html>

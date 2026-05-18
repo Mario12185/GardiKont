@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GardiKont</title>
+  <script>
+    const path = window.location.pathname;
+    const basePath = '/GardiKont';
+    if (!path.endsWith('index.html') && !path.endsWith('/')) {
+      sessionStorage.setItem('redirectPath', path.replace(basePath, ''));
+      window.location.replace(basePath + '/index.html');
+    }
+  </script>
+</head>
+<body></body>
+</html>
